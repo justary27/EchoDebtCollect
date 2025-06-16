@@ -1,5 +1,3 @@
-// cartesia-stt-server.js
-
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const http = require('http');
 // eslint-disable-next-line @typescript-eslint/no-require-imports

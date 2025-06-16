@@ -24,3 +24,10 @@ Echo Debt Collect uses advanced natural language processing and voice AI technol
 5. AI testing systems evaluate agent performance and suggest optimizations
 
 
+## To run
+
+```
+bun i
+bun run dev
+node cartesia.js
+```
