@@ -31,3 +31,5 @@ bun i
 bun run dev
 node cartesia.js
 ```
+
+Create a .env by copying the .sample file and pasting your keys.

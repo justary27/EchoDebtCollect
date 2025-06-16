@@ -30,11 +30,17 @@ export default function AgentTestPage() {
 
   const router = useRouter();
 
-    const handleStartTest = () => {
+  const handleStartTest = () => {
     if (selectedIndex === null) return;
     const selected = profiles[selectedIndex];
     router.push(`/agents/${agentId}/test/${selected.id}`);
-    };
+  };
+
+  const handleStartChat = () => {
+    if (selectedIndex === null) return;
+    const selected = profiles[selectedIndex];
+    router.push(`/agents/${agentId}/test/${selected.id}/chat`);
+  };
 
   if (loading) return <p className="p-12 text-gray-500">Loading debt profiles...</p>;
 
@@ -78,6 +84,18 @@ export default function AgentTestPage() {
         }`}
       >
         Start Test Session
+      </button>
+
+      <button
+        disabled={selectedIndex === null}
+        onClick={handleStartChat}
+        className={`mt-6 px-6 py-2 rounded-md text-sm font-medium transition ${
+          selectedIndex === null
+            ? 'bg-white/20 text-white/40 cursor-not-allowed'
+            : 'bg-white/30 hover:bg-white/20 text-white'
+        }`}
+      >
+        Start Chat Session
       </button>
     </div>
   );
